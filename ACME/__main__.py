@@ -1,8 +1,8 @@
 import re
-from utils import string_to_time, check_line, check_file_extesion
+from utils import string_to_time, check_file_extesion
 import json
 import sys
-from errors import FileNotLoaded, bcolors
+from errors import FileNotLoaded
 
 class AcmeEmployee:
     def __init__(self, string, company_payment_data):
@@ -37,21 +37,14 @@ class AcmeEmployee:
         #Call the function to make the calculations.
         return employee_days_and_hours, employee_days_and_hours
 
-    def read_lines(lines):
-        nro_lines = 1
-        for line in lines:
-            if not check_line(line):
-                print(f"{bcolors.FAIL}Error in line {bcolors.OKBLUE}{nro_lines}{bcolors.ENDC}{bcolors.FAIL} please make sure to use the standar format. This line will not be computed{bcolors.ENDC}")
-            else:
-                print(line)
-            nro_lines += 1
+
 
     if __name__ == '__main__':
         if len(sys.argv) < 2:
             FileNotLoaded()
         user_input = sys.argv[1]
-        lines = check_file_extesion(user_input)
-        read_lines(lines)
+        check_file_extesion(user_input)
+        
 
 
 

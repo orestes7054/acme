@@ -45,7 +45,16 @@ def read_file_lines(path: str) -> str:
         except FileNotFoundError:
                 print(bcolors.FAIL + 'File not found. Make sure to submit the complete path to the file.')
         
-        
-        return lines
+        read_lines(lines)
 
+def read_lines(lines):
+        cleared_lines = list()
+        nro_lines = 1
+        for line in lines:
+            if not check_line(line):
+                print(f"{bcolors.FAIL}Error in line {bcolors.OKBLUE}{nro_lines}{bcolors.ENDC}{bcolors.FAIL} please make sure to use the standar format. This line will not be computed{bcolors.ENDC}")
+            else:
+                cleared_lines.append(line)
+            nro_lines += 1
+        print(cleared_lines)
 
