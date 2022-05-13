@@ -1,6 +1,8 @@
 import re
-from utils import string_to_time
+from utils import string_to_time, check_line, check_file_extesion
 import json
+import sys
+from errors import FileNotLoaded, bcolors
 
 class AcmeEmployee:
     def __init__(self, string, company_payment_data):
@@ -33,23 +35,23 @@ class AcmeEmployee:
         #Overwrite the object with date time format to manipulate in the ProccesPayment function.
         employee_days_and_hours = [ (i[0], string_to_time(i[1]), string_to_time(i[2])) for i in employee_days_and_hours]
         #Call the function to make the calculations.
-        self.ProccesPayment(employee_name, employee_days_and_hours)
-        return 
+        return employee_days_and_hours, employee_days_and_hours
 
-    
+    def read_lines(lines):
+        nro_lines = 1
+        for line in lines:
+            if not check_line(line):
+                print(f"{bcolors.FAIL}Error in line {bcolors.OKBLUE}{nro_lines}{bcolors.ENDC}{bcolors.FAIL} please make sure to use the standar format. This line will not be computed{bcolors.ENDC}")
+            else:
+                print(line)
+            nro_lines += 1
+
+    if __name__ == '__main__':
+        if len(sys.argv) < 2:
+            FileNotLoaded()
+        user_input = sys.argv[1]
+        lines = check_file_extesion(user_input)
+        read_lines(lines)
 
 
-    def ProccesPayment(self, employee_name, employee_days_and_hours):
-        total_payment = 0
-        for data in employee_days_and_hours:
-            day, start_time, end_time = data[0], data[1], data[2]
-            if day in self.week_days:
-                for worked_hour in range(start_time, end_time):
-                    print(worked_hour)
 
-
-
-
-employee = AcmeEmployee('RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00', 'payment.json')
-
-employee.GetName()
