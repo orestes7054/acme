@@ -56,5 +56,7 @@ def read_lines(lines):
             else:
                 cleared_lines.append(line)
             nro_lines += 1
-        print(cleared_lines)
+        for data in cleared_lines:
+                name, worked_hours_days = get_name_and_days__hours(data)
+                print(name, worked_hours_days)
 

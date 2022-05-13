@@ -20,22 +20,7 @@ class AcmeEmployee:
         self.weekend_payment = [ [string_to_time(i[0]), string_to_time(i[1]), int(i[2])] for i in self.company_payment_data["weekend_pay"]]
         
 
-    
-    def GetName(self):
-        """
-         Function to obtain the data to proccess from the string passed.
-         This function uses regex to parse the data.
-         The result data is the name of the employee and a list of tuples:
-         tuple[0]=day, tuple[1]=start hour, tuple[2]=end hour.
-        """
-        #Get the name of the employee.
-        employee_name = re.search(r"([A-Za-z]+)([=]+)", self.string).group(1)
-        #Get the worked days and hours as a list of tuples.
-        employee_days_and_hours = re.findall(r"([A-Z]{2})([0-9][0-9]:[0-9][0-9])-([0-9][0-9]:[0-9][0-9])", self.string)
-        #Overwrite the object with date time format to manipulate in the ProccesPayment function.
-        employee_days_and_hours = [ (i[0], string_to_time(i[1]), string_to_time(i[2])) for i in employee_days_and_hours]
-        #Call the function to make the calculations.
-        return employee_days_and_hours, employee_days_and_hours
+   
 
 
 
