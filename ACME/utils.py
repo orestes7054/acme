@@ -5,7 +5,8 @@ from errors import EmptyFileError, ErrorFileType, bcolors
 
 
 def string_to_time(time_string):
-        return datetime.strptime(time_string, "%H:%M").time()
+        time_formatted = datetime.strptime(time_string, "%H:%M")
+        return timedelta(hours=time_formatted.hour, minutes=time_formatted.minute)
 
 
 def check_line(line):
