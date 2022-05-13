@@ -18,7 +18,28 @@ class AcmeEmployee:
         #Make the string data to time data (worked time) and int data (pay per hour).
         self.week_payment = [ [string_to_time(i[0]), string_to_time(i[1]), int(i[2])] for i in self.company_payment_data["week_pay"]]
         self.weekend_payment = [ [string_to_time(i[0]), string_to_time(i[1]), int(i[2])] for i in self.company_payment_data["weekend_pay"]]
-        
+       
+    def ProccesPayment(self, employee_name, employee_days_and_hours):
+        total_payment = 0
+
+        for data in employee_days_and_hours:
+            day, start_time, end_time = data[0], data[1], data[2]
+            current_hour = start_time
+            while current_hour < end_time:
+                if day in self.week_days:
+                    for pay in self.week_payment:
+                        if  pay[0] <= current_hour <= pay[1]:
+                            total_payment += pay[2]
+                else:
+                    for pay in self.weekend_payment:
+                        print(pay[0],pay[1])
+                        print(current_hour)
+                        if pay[0] <= current_hour <= pay[1]:
+                            total_payment += pay[2]           
+                current_hour += timedelta(hours=1)
+                
+                
+        print(total_payment)
 
    
 
