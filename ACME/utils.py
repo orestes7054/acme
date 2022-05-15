@@ -1,7 +1,7 @@
 from datetime import datetime
 import re
-from errors import EmptyFileError, ErrorFileType, bcolors
-from errors import bcolors
+from  ACME.errors import EmptyFileError, ErrorFileType, bcolors
+from ACME.errors import bcolors
 
 
 
@@ -10,7 +10,7 @@ from errors import bcolors
 def check_file_extesion(path: str) -> str:
         """
         First function to check if the file
-        extension is a .txt if so, call the next
+        extension is a .txt: if so, call the next
         function
         """
         if not path.endswith('.txt'):
@@ -38,7 +38,7 @@ def read_lines(lines_input: list) -> list:
         Check for input errors in the file.
         If there's error print it.
         Lines with no problem are appended to the cleared_lines list 
-        and pass it to the next function.
+        and returned to the main Class AcmeEmployee.
         """
         cleared_lines = []
         nro_lines = 1
@@ -113,6 +113,10 @@ def help():
                         |___\___/|_____| |_|
 ........................................................................
 {bcolors.ENDC}
+To start install the setup.py run in the terminal:
+python setup.py install
+for linux:
+python3 setup.py install
 This program is designed to obtain the total amount for the employees of ACME. 
 The info has to be submit in a .txt file with this format:
 

@@ -3,7 +3,7 @@ import json
 import sys
 from errors import FileNotLoaded, OptionError
 from datetime import timedelta
-
+import os
 
 class AcmeEmployee():
     output = ''
@@ -25,7 +25,7 @@ class AcmeEmployee():
         self.procces_payment()
      
         
-    def procces_payment(self) -> list:
+    def procces_payment(self: list) -> list:
         """
         This function is the core of the app. Here the computation of 
         the total salary is made
@@ -53,7 +53,10 @@ class AcmeEmployee():
         AcmeEmployee.output += f"The amount to pay {employee} is: {total_payment} USD\n"
 
     @staticmethod
-    def save_output():  
+    def save_output():
+        """
+        Save the output to a .txt file
+        """  
         with open("acme_employee_payment_roll.txt", "w+") as wf:
             wf.writelines(AcmeEmployee.output)
         
@@ -68,6 +71,7 @@ if __name__ == '__main__':
     argv = sys.argv[1:]
     if len(argv) >= 1:
         if len(argv) == 2:
+            #If the user types an option and the file 
             if argv[0] == '-sc':
                 user_input = argv[1]
                 employees = check_file_extesion(user_input)
@@ -78,13 +82,18 @@ if __name__ == '__main__':
             else:
                 raise OptionError
         elif len(argv) == 1:
+            #The user just type the option or
+            #the file
             if argv[0] == '-h':
                 help()
             else:
                 user_input = argv[0]
                 employees = check_file_extesion(user_input)
+                print(employees)
                 for employee in employees:
                     AcmeEmployee(employee)
                 print(str(AcmeEmployee.output))
     else:
         FileNotLoaded()
+    
+   
