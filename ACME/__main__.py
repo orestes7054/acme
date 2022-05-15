@@ -89,7 +89,6 @@ if __name__ == '__main__':
             else:
                 user_input = argv[0]
                 employees = check_file_extesion(user_input)
-                print(employees)
                 for employee in employees:
                     AcmeEmployee(employee)
                 print(str(AcmeEmployee.output))

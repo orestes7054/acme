@@ -47,5 +47,5 @@ class ErrorFileType(Exception):
 class OptionError(Exception):
         def __init__(self) :
                 error = logging.getLogger()
-                error.error(bcolors.WARNING + 'Option no valid. Please select -sc to save a copy of the input or -h for help')
+                error.error(bcolors.WARNING + 'Option no valid. Please select -sc to save a copy of the input or just run python ACME -h')
                 exit(1)
