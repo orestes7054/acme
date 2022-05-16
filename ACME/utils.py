@@ -125,10 +125,6 @@ def help():
                         |___\___/|_____| |_|
 ........................................................................
 {bcolors.ENDC}
-To start install the setup.py run in the terminal:
-python setup.py install
-for linux:
-python3 setup.py install
 This program is designed to obtain the total amount for the employees of ACME. 
 The info has to be submit in a .txt file with this format:
 
