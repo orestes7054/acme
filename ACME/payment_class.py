@@ -1,6 +1,7 @@
 from ACME.utils import string_to_time, string_to_time_employee
 import json
 from datetime import timedelta
+import os
 
 class AcmeEmployee():
     output = ''
@@ -52,8 +53,10 @@ class AcmeEmployee():
     def save_output():
         """
         Save the output to a .txt file
-        """  
-        with open("acme_employee_payment_roll.txt", "w+") as wf:
+        """
+        ROOT_DIR = os.path.abspath(os.curdir)
+        joined_path = os.path.join(ROOT_DIR, "acme_employee_payment_roll.txt") 
+        with open(joined_path, "w+") as wf:
             wf.writelines(AcmeEmployee.output)
         
 
