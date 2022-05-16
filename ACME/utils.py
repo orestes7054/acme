@@ -90,10 +90,22 @@ def string_to_time(time_string):
         """
         now = datetime.now()
         hours, minutes = time_string.split(":")[0],  time_string.split(":")[1]
-        if hours== '00' and minutes == '00':
-                hours, minutes = '23', '59'
+        if hours == '00' and minutes == '00':
+                hours,minutes = '23', '59'
         total_time = now.replace(hour=int(hours), minute=int(minutes), second=0, microsecond=0)
         return total_time
+
+def string_to_time_employee(time_string):
+        """
+        Function to transform the str data to
+        time data.
+        """
+        now = datetime.now()
+        hours, minutes = time_string.split(":")[0],  time_string.split(":")[1]
+        total_time = now.replace(hour=int(hours), minute=int(minutes), second=0, microsecond=0)
+        return total_time
+
+
 
 
 def help():

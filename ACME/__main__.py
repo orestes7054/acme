@@ -1,9 +1,8 @@
-from utils import string_to_time, check_file_extesion, help
-import json
+from ACME.utils import string_to_time, check_file_extesion, string_to_time_employee, help
 import sys
-from errors import FileNotLoaded, OptionError
+import json
+from ACME.errors import FileNotLoaded, OptionError
 from datetime import timedelta
-import os
 
 class AcmeEmployee():
     output = ''
@@ -36,19 +35,18 @@ class AcmeEmployee():
         employee = self.cleared_data[0]
         working_hours = self.cleared_data[1]
         for data in working_hours:
-            day, start_time, end_time = data[0], string_to_time(data[1]), string_to_time(data[2])
+            day, start_time, end_time = data[0], string_to_time_employee(data[1]), string_to_time_employee(data[2])
             current_hour = start_time
             while current_hour < end_time:
-                if day in self.week_days:
-                    for pay in self.week_payment:
-                        if  pay[0] <= current_hour <= pay[1]:
-                            total_payment += pay[2]
-                else:
-                    for pay in self.weekend_payment:
-                        if pay[0] <= current_hour <= pay[1]:
-                            total_payment += pay[2]
-                                     
                 current_hour +=  timedelta(hours=1)
+                if day in self.week_days:
+                    for hour in self.week_payment:
+                        if  hour[0] <= current_hour <= hour[1]:
+                            total_payment += hour[2]       
+                else:
+                    for hour in self.weekend_payment:
+                        if hour[0] <= current_hour <= hour[1]:
+                            total_payment += hour[2]
     
         AcmeEmployee.output += f"The amount to pay {employee} is: {total_payment} USD\n"
 
