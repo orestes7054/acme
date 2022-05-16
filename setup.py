@@ -12,12 +12,12 @@ setup(
     version= '0.0.2',
     description="App to calculate salary of Acme's Employees",
     license="MIT",
-    author="Orestes Olivera Marrero",
+    author="Orestes Olivera",
     author_email="orestes.om@gmail.com",
     url="https://github.com/orestes7054/acme",
     packages=find_packages(),
-    package_data={'ACME': ['acme.txt']},
-    test_suite="tests",
+    package_data={'ACME': ['acme.txt','payment.json']},
+    test_suite="test",
     classifiers=[
         "Programming Language :: Python :: 3.9",
         "License :: OSI Approved :: MIT License"
