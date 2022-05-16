@@ -28,9 +28,6 @@ The main function of the program is to compute the total payment amount for the 
 	&nbsp;&nbsp;&nbsp; │   ├── <a href=".//test/data/test_acme.txt">test_acme.txt</a><br>
 	&nbsp;&nbsp;&nbsp; │   └── <a href=".//test/data/wrong_format.jpg">wrong_format.jpg</a><br>
 	&nbsp;&nbsp;&nbsp; ├── <a href=".//test/__init__.py">__init__.py</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href=".//test/__pycache__/">__pycache__</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href=".//test/__pycache__/__init__.cpython-38.pyc">__init__.cpython-38.pyc</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href=".//test/__pycache__/test_acme.cpython-38.pyc">test_acme.cpython-38.pyc</a><br>
 	&nbsp;&nbsp;&nbsp; └── <a href=".//test/test_acme.py">test_acme.py</a><br>
 	<br><br>
 	</p>
