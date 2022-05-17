@@ -74,6 +74,7 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 ### Test
 <pre>git clone https://github.com/orestes7054/acme.git</pre>
 <pre>cd ACME</pre>
+<pre>pip install .</pre>
 <pre>python -m unittest -v</pre>
 
 
