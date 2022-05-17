@@ -143,19 +143,21 @@ RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
 
 You can use as many lines as you want. The output will be the total amount that each employeee has earned. 
 To proccess the data type in the terminal use this commands:
-python ACME <path to the file>
+ACME <path to the file>
 The path to the .txt file has to be explicit, 
 example: "C:/User/Desktop/acme_may_payroll.txt" 
 or you can put the file in the same directory of the project and simple run it:
 python ACME acme_may_payroll.txt
-Note: In linux use python3 ACME <path to the file>
 ####################################
 
 OPTIONS
 ---------------
 To save the output in a .txt file in the same directory of the project use -sc (save copy) before the path to the file,
 example:
-python ACME -sc <path to the file> 
+ACME -sc <path to the file> 
+
+To see and example user the -example command:
+ACME -example
 
 NOTES
 -----------
