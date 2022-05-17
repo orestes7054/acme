@@ -1,9 +1,9 @@
 from datetime import datetime
 import re
 from  ACME.errors import EmptyFileError, ErrorFileType, bcolors
+import os
 
-
-############-------START OF CANCATENATION FUNCTIONS----------#################
+############--------START OF CANCATENATION FUNCTIONS--------#################
 
 def check_file_extesion(path: str) -> str:
         """
@@ -49,7 +49,7 @@ def read_lines(lines_input: list) -> list:
        
         return cleared_lines
 
-############-------END OF CANCATENATION FUNCTIONS----------#################
+############--------END OF CANCATENATION FUNCTIONS--------#################
 
 
 def check_line(line):
@@ -104,9 +104,22 @@ def string_to_time_employee(time_string):
         return total_time
 
 
-def example(output):
-        with open('ACME/acme.txt', 'r') as f:
+def open_files(file_name, example=False):
+        """
+        Function to open the data files of the program
+        """
+        __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+        with open(os.path.join(__location__, file_name), 'r') as f:
                 info = f.read()
+        if example:
+                return os.path.join(__location__, file_name)
+        else:
+                return info
+
+
+def example(output):
+        info = open_files('acme.txt')
+        
         text = f"""
 The .txt contains this lines:
 
@@ -148,7 +161,7 @@ The path to the .txt file has to be explicit,
 example: "C:/User/Desktop/acme_may_payroll.txt" 
 or you can put the file in the same directory of the project and simple run it:
 python ACME acme_may_payroll.txt
-####################################
+######################################################
 
 OPTIONS
 ---------------

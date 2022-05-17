@@ -1,17 +1,15 @@
 import json
 from datetime import timedelta
 import os
-from ACME.utils import string_to_time, string_to_time_employee
+from ACME.utils import string_to_time, string_to_time_employee, open_files
 
 class AcmeEmployee():
     output = ''
-    def __init__(self, cleared_data, json_file='ACME/payment.json'):
+    def __init__(self, cleared_data, json_file=open_files('payment.json')):
         self.json_file = json_file
         self.cleared_data = cleared_data
-        
         #Open the json file and read the data
-        with open(self.json_file) as f:
-            company_payment_data = json.load(f)
+        company_payment_data = json.loads(self.json_file)
         self.company_payment_data = company_payment_data
         #Load the days and weekend days
         self.week_days = company_payment_data["week"]

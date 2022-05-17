@@ -1,5 +1,5 @@
 import sys
-from ACME.utils import check_file_extesion,  help, example, read_file_lines
+from ACME.utils import check_file_extesion,  help, example, open_files, read_lines
 from ACME.errors import FileNotLoaded, OptionError
 from ACME.payment_class import AcmeEmployee
 
@@ -22,7 +22,8 @@ def main():
             if argv[0] == '-h':
                 help()
             elif argv[0] == '-example':
-                employees = read_file_lines('ACME/acme.txt')
+                example_data = open_files('acme.txt', example=True)
+                employees = check_file_extesion(example_data)
                 for employee in employees:
                     AcmeEmployee(employee)
                 example(str(AcmeEmployee.output))
