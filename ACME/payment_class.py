@@ -1,7 +1,7 @@
-from ACME.utils import string_to_time, string_to_time_employee
 import json
 from datetime import timedelta
 import os
+from ACME.utils import string_to_time, string_to_time_employee
 
 class AcmeEmployee():
     output = ''
@@ -58,6 +58,7 @@ class AcmeEmployee():
         joined_path = os.path.join(ROOT_DIR, "acme_employee_payment_roll.txt") 
         with open(joined_path, "w+") as wf:
             wf.writelines(AcmeEmployee.output)
+        print(f'File saved in {joined_path}!')
         
 
 

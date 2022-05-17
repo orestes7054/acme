@@ -1,8 +1,6 @@
 from datetime import datetime
 import re
 from  ACME.errors import EmptyFileError, ErrorFileType, bcolors
-from ACME.errors import bcolors
-
 
 
 ############-------START OF CANCATENATION FUNCTIONS----------#################
@@ -105,6 +103,19 @@ def string_to_time_employee(time_string):
         total_time = now.replace(hour=int(hours), minute=int(minutes), second=0, microsecond=0)
         return total_time
 
+
+def example(output):
+        with open('ACME/acme.txt', 'r') as f:
+                info = f.read()
+        text = f"""
+The .txt contains this lines:
+
+{bcolors.OKBLUE}{info}
+The output will be:
+
+{bcolors.OKGREEN}{output}
+        """
+        print(text)
 
 
 
