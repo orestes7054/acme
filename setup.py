@@ -8,7 +8,7 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name="acme_orestes_ioet_2022",
+    name="acme_ioet_orestes",
     version= '0.0.4',
     description="App to calculate salary of Acme's Employees",
     license="MIT",
