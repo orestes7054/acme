@@ -47,16 +47,16 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 	
 	
 ### Installation via PIP
-	<pre>pip install acme-orestes-ioet-2022==0.0.4</pre>
-Then use terminal with:
+	pip install acme-orestes-ioet-2022==0.0.4
+<p>Then use terminal with:</p>
 <p>For instructions</p>
 <pre>ACME -h</pre>
 <p>To see and example:</p>
-<pre>AMCE -example</pre>
+<pre>ACME -example</pre>
 <p>To use the program</p>
-<pre>ACME <path to the .txt file></pre>
+<pre>ACME &#60path to the .txt file&#62</pre>
 <p>If you want to save a copy of the output:</p>
-<pre>ACME -sc <path to the .txt file></pre>
+<pre>ACME -sc &#60path to the .txt file&#62</pre>
 
 ### Manual Installation
 <pre>git clone https://github.com/orestes7054/acme.git</pre>
@@ -65,11 +65,11 @@ Then use terminal with:
 <p>For instructions</p>
 <pre>python ACME -h</pre>
 <p>To see and example:</p>
-<pre>python MCE -example</pre>
+<pre>python ACME -example</pre>
 <p>To use the program</p>
 <pre>python ACME &#60path to the .txt file&#62</pre>
 <p>If you want to save a copy of the output:</p>
-<pre>python ACME -sc <b>path to the .txt file</b>"</pre>
+<pre>python ACME -sc &#60path to the .txt file&#62</pre>
 
 ### Test
 <pre>git clone https://github.com/orestes7054/acme.git</pre>
