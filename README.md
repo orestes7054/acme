@@ -47,7 +47,7 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 	
 	
 ### Installation via PIP
-	pip install acme-orestes-ioet-2022==0.0.4
+	pip install acme-ioet-orestes
 <p>Then use terminal with:</p>
 <p>For instructions</p>
 <pre>ACME -h</pre>
