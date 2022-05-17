@@ -39,8 +39,25 @@ The main function of the program is to compute the total payment amount for the 
 	<hr>
 </body>
 
-Sorted by hierarchy the ACME file contains the core operations. In **payment_class.py** is the main class that make the computation. In **utils.py** are the function to check the user's input, clear the data and transform text to datetime objects. In **errors.py** are the classes for erorrs. *I tried to keep the project as simple as posible and don't abuse the Classes' use; avoiding the re-calling of simple functions*. The **test** folder includes all the neccesary elements to test the code. The **setup.py** is use to create all the neccesaries elements to make a module of every folder, that way the test can be run from the temrinal with the commands: python -m unittest -v. [Related to setup.py](https://xkcd.com/353/) 
+Sorted by hierarchy the ACME file contains the core operations. In **payment_class.py** is the main class that make the computation. In **utils.py** are the function to check the user's input, clear the data and transform text to datetime objects. In **errors.py** are the classes for erorrs. *I tried to keep the project as simple as posible and don't abuse the Classes' use; avoiding the re-calling of simple functions*. The **test** folder includes all the neccesary elements to test the code. The **setup.py** is use to create all the neccesaries elements to make a module of every folder with no problemas. [Related to setup.py](https://xkcd.com/353/) 
 <p>In the <b>utils.py</b> the functions are concatenate, this is a practice I inherit from <a href="https://docs.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office">VBA</a> where you usually call a function from a function and run the program consecutively, this is also use in <a href="https://www.google.com/script/start/">Google Apps Script</a>.
 	
 
 ![ACME](https://user-images.githubusercontent.com/56367486/168681520-803e911a-0576-4711-a833-125dba40cea0.PNG)
+	
+	
+### Installation via PIP
+	<pre>pip install acme-orestes-ioet-2022==0.0.4</pre>
+Then use terminal with:
+<p>For instructions</p>
+<pre>ACME -h</pre>
+<p>To see and example:</p>
+<pre>AMCE -example</pre>
+<p>To use the program</p>
+<pre>ACME <path to the .txt file></pre>
+<p>If you want to save a copy of the output:</p>
+<pre>ACME -sc <path to the .txt file></pre>
+### Manual Installation
+git clone 
+	
+
