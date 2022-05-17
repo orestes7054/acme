@@ -77,6 +77,6 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 <pre>pip install .</pre>
 <pre>python -m unittest -v</pre>
 
-
+NOTE: The use of the command <pip install .> is to avoid dependencies problems. For some version of linux (ubuntu for example) the use of <python3 setup.py install> is not recommended. 
 	
 
