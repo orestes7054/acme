@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name="acme_ioet_orestes",
-    version= '0.0.4',
+    version= '0.0.2',
     description="App to calculate salary of Acme's Employees",
     license="MIT",
     author="Orestes Olivera",
