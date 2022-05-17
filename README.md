@@ -57,7 +57,25 @@ Then use terminal with:
 <pre>ACME <path to the .txt file></pre>
 <p>If you want to save a copy of the output:</p>
 <pre>ACME -sc <path to the .txt file></pre>
+
 ### Manual Installation
-git clone 
+<pre>git clone https://github.com/orestes7054/acme.git</pre>
+<pre>cd ACME</pre>
+<pre>pip install .</pre>
+<p>For instructions</p>
+<pre>python ACME -h</pre>
+<p>To see and example:</p>
+<pre>python MCE -example</pre>
+<p>To use the program</p>
+<pre>python ACME &#60path to the .txt file&#62</pre>
+<p>If you want to save a copy of the output:</p>
+<pre>python ACME -sc <b>path to the .txt file</b>"</pre>
+
+### Test
+<pre>git clone https://github.com/orestes7054/acme.git</pre>
+<pre>cd ACME</pre>
+<pre>python -m unittest -v</pre>
+
+
 	
 
