@@ -59,7 +59,7 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 
 ### Manual Installation
 <pre>git clone https://github.com/orestes7054/acme.git</pre>
-<pre>cd ACME</pre>
+<pre>cd acme</pre>
 <pre>pip install .</pre>
 <p>For instructions</p>
 <pre>python ACME -h</pre>
@@ -72,7 +72,7 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 
 ### Test
 <pre>git clone https://github.com/orestes7054/acme.git</pre>
-<pre>cd ACME</pre>
+<pre>cd acme</pre>
 <pre>pip install .</pre>
 <pre>python -m unittest -v</pre>
 
