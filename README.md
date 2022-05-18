@@ -78,7 +78,7 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 
 ### Assumptions
 1. The employees can not make portion of hour, they have to submit a complete hour.
-2. And employee can not make just one day of work, the program will not read a line like this: RENE=MO10:00-15:00. If this assumptions is not correct, to change this and read just one day we need to change the **check_line** function with this regex: (([A-Za-z]+[=]+[A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9])*(([A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9],)*([A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9])($|\s)*))
+2. And employee can not make just one day of work, the program will not read a line like this: RENE=MO10:00-15:00. If this assumptions is not correct, to change this and read just one day we need to change the **check_line** function regex.
 
 * * *
 
