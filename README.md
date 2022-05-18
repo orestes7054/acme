@@ -76,6 +76,10 @@ Sorted by hierarchy the ACME file contains the core operations. In **payment_cla
 <pre>pip install .</pre>
 <pre>python -m unittest -v</pre>
 
+### Assumptions
+1. The employees can not make portion of hour, they have to submit a complete hour.
+2. And employee can not make just one day of work, the program will not read a line like this: RENE=MO10:00-15:00. If this assumptions is not correct, to change this and read just one day we need to change the **check_line** function with this regex: (([A-Za-z]+[=]+[A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9])*(([A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9],)*([A-Z]{2}[0-9][0-9]:[0-9][0-9]-[0-9][0-9]:[0-9][0-9])($|\s)*))
+
 NOTE: The use of the command <pip install .> is to avoid dependencies problems. For some version of linux (ubuntu 18.04 for example) the use of <python3 setup.py install> is not recommended. 
 For use is recommended the pip via install.
 	
